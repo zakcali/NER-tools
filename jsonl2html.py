@@ -17,16 +17,16 @@ def visualize_medical_reports(filename="all.jsonl", output_filename="all.html"):
 .ANAT {
 	background-color:Fuchsia
 }
-.OBS-PRESENT {
+.OBS-P {
 	background-color:DeepSkyBlue
 }
-.OBS-ABSENT {
+.OBS-A {
 	background-color:Yellow
 }
-.OBS-UNCERTAIN {
+.OBS-U {
 	background-color:DarkGray 
 }
-.IMPRESSION {
+.IMP {
 	background-color:#ED2939
 }
 </style>
