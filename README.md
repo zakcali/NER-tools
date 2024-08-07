@@ -1,6 +1,7 @@
 # NER-tools
 
 To facilitate NER data manipulation, we created the NER-tools GitHub repository (https://github.com/zakcali/NER-tools ), featuring useful scripts like jsonl2html.py, jsonl2spacy.py, and many more. Here is the scripts and their usage:
+
 •	jsonl2html.py converts a file created by doccano into a visual HTML file.
 
 •	jsonl2spacy.py converts a file created by doccano into a spacy-json file.
