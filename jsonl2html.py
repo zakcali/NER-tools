@@ -1,5 +1,6 @@
 import json
 import sys
+import re
 from IPython.display import HTML
 
 
@@ -51,7 +52,7 @@ def visualize_medical_reports(filename="all.jsonl", output_filename="all.html"):
                 text = text[:start] + entity_html + text[end:]
 
             # To preserve single newlines but remove consecutive ones
-			text = text.replace("\n \n \n", "\n")
+            text = text.replace("\n \n \n", "\n")
             text = text.replace("\n \n", "\n")
             text = re.sub(r'(\n)+', '\n', text)
             # Replace \n with \n<br> for line breaks to see in html browser
@@ -77,9 +78,9 @@ def visualize_medical_reports(filename="all.jsonl", output_filename="all.html"):
 
 arguments = sys.argv
 if len(arguments) > 1:
-    print("Converting doccano jsonl file, named:",arguments[1], "into html file")
+    print(arguments[1], "isimli jsonl dosyasını html formatına çeviriyorum")
     html_visualization = visualize_medical_reports(arguments[1] + ".jsonl", arguments[1] + ".html")
 else:
-    print("Converting doccano jsonl file, named all.jsonl into html file, named all.html")
+    print("all isimli jsonl dosyasını html formatına çeviriyorum")
     html_visualization = visualize_medical_reports()
 html_visualization
