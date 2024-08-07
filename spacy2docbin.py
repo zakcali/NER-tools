@@ -5,6 +5,7 @@ from spacy.tokens import DocBin
 from spacy.tokenizer import Tokenizer
 from spacy.util import compile_infix_regex, compile_suffix_regex, compile_prefix_regex
 
+
 def convert_json(source_file, destination_file):
     nlp = spacy.blank("tr")
     # Define your specific characters for isolation
@@ -75,10 +76,8 @@ def convert_json(source_file, destination_file):
 
 arguments = sys.argv
 if len(arguments) > 1:
-    print("Converting spacy json file, named:",arguments[1], "into spacy docbin file")
+    print("Converting spacy json file, named:", arguments[1], "into spacy docbin file")
     convert_json(arguments[1] + ".json", arguments[1] + ".spacy")
 else:
     print("Converting spacy json file, named input.json into spacy docbin file, named train.spacy")
     convert_json('input.json', 'train.spacy')
-
-

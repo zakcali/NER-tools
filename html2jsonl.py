@@ -62,7 +62,7 @@ def convert_html(html_file, output_file):
 
 arguments = sys.argv
 if len(arguments) > 1:
-    print("Converting html file, named:", arguments[1],"into doccano jsonl format" )
+    print("Converting html file, named:", arguments[1], "into doccano jsonl format")
     convert_html(arguments[1] + ".html", arguments[1] + ".jsonl")
 else:
     print("Converting html file, named input.html into doccano jsonl file named output.jsonl")

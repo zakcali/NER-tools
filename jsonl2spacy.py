@@ -36,9 +36,8 @@ def convert_jsonl(source_file, destination_file):
 
 arguments = sys.argv
 if len(arguments) > 1:
-    print("Converting doccano jsonl file, named:",arguments[1],"into spacy json file")
+    print("Converting doccano jsonl file, named:", arguments[1], "into spacy json file")
     convert_jsonl(arguments[1] + ".jsonl", arguments[1] + ".json")
 else:
     print("Converting doccano jsonl file, named input.jsonl into spacy json file, named output.json")
     convert_jsonl('input.jsonl', 'output.json')
-
