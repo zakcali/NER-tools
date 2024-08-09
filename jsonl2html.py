@@ -78,9 +78,9 @@ def visualize_medical_reports(filename="all.jsonl", output_filename="all.html"):
 
 arguments = sys.argv
 if len(arguments) > 1:
-    print(arguments[1], "isimli jsonl dosyasını html formatına çeviriyorum")
+    print("Converting doccano jsonl file, named:",arguments[1], "into html file")
     html_visualization = visualize_medical_reports(arguments[1] + ".jsonl", arguments[1] + ".html")
 else:
-    print("all isimli jsonl dosyasını html formatına çeviriyorum")
+    print("Converting doccano jsonl file, named: all.jsonl into all.html file")
     html_visualization = visualize_medical_reports()
 html_visualization
