@@ -12,5 +12,6 @@ To facilitate NER data manipulation, we created the NER-tools GitHub repository,
 
 •	html2jsonl.py converts a visual HTML file into a doccano jsonl file.
 
+•	combine-htmls.py combines multiple HTML files into a single html file.
 
 To convert html to spacy docbin format, one must run scripts sequentially html2jsonl.py -> jsonl2spacyjson.py -> spacy2docbin.py
