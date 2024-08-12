@@ -86,8 +86,8 @@ def generate_report(y_true, y_pred, labels):
     precision, recall, f1, support = precision_recall_fscore_support(y_true_filtered, y_pred_filtered, labels=labels_filtered, zero_division=0)
     
     # Calculate macro and weighted averages
-    macro_precision, macro_recall, macro_f1, _ = precision_recall_fscore_support(y_true_filtered, y_pred_filtered, average='macro', zero_division=0)
-    weighted_precision, weighted_recall, weighted_f1, _ = precision_recall_fscore_support(y_true_filtered, y_pred_filtered, average='weighted', zero_division=0)
+    macro_precision, macro_recall, macro_f1, _ = precision_recall_fscore_support(y_true_filtered, y_pred_filtered, labels=labels_filtered, average='macro', zero_division=0)
+    weighted_precision, weighted_recall, weighted_f1, _ = precision_recall_fscore_support(y_true_filtered, y_pred_filtered, labels=labels_filtered, average='weighted', zero_division=0)
     
     # Add macro and weighted averages to the report
     report += "Macro Average:\n"
