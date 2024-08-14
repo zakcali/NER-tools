@@ -6,6 +6,8 @@ To facilitate NER data manipulation, we created the NER-tools GitHub repository,
 
 •	jsonl2spacy.py converts a file created by doccano into a spacy-json file.
 
+•	docbin2jsonl.py converts a file named dev.spacy into a doccano format file named dev.jsonl.
+
 •	spacy2docbin.py converts a spacy-json file into a spacy-docbin file.
 
 •	spacysplit2docbin.py converts a spacy-json file into spacy-docbin files named train.spacy and dev.spacy
