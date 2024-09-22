@@ -24,4 +24,4 @@ To convert html to spacy docbin format, one must run scripts sequentially html2j
 
 •	seqevalF1.py reads y_pred.bio and y_true.bio and calculates metrics with python seqeval library.
 
-•	patch-to-scorer.py: patched get_ner_prf function of scorer.py of spaCy V3.7.5 in directory C:\Python\Python311\Lib\site-packages\spacy
+•	patch-to-scorer.py: patched get_ner_prf function of scorer.py of spaCy V3.7.5 in directory C:\Python\Python311\Lib\site-packages\spacy to output more metrics.
