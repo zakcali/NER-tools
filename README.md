@@ -20,3 +20,8 @@ To facilitate NER data manipulation, we created the NER-tools GitHub repository,
 
 
 To convert html to spacy docbin format, one must run scripts sequentially html2jsonl.py -> jsonl2spacyjson.py -> spacy2docbin.py
+
+•	bio_converter.py splits and converts entities_f1.csv file into y_pred.bio and y_true.bio
+
+•	seqevalF1.py reads y_pred.bio and y_true.bio and calculates metrics with python seqeval library.
+
