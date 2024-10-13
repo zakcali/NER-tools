@@ -31,9 +31,9 @@ nodejs folder
 requirements: prompt.html file in the same folder, reports folder holds radiology reports in text format (endfing with .txt extension), empty outputs folder, google generative-ai api installed in node_modules folder ("version": "0.7.1" in April 2024).
 Scripts read prompt.html from current folder, read reports from reports folder, outputs tagged reports to outputs folder.
 
-•	test-bt-orig.js : test script run on April 2024 with gemini 1.5 pro preview api with 1 million tokens context length
+•	test-bt-orig.js : test script run on April 2024 with gemini 1.5 pro preview api with 1 million tokens context length (needs paid quota now)
 
-•	test-bt-exp-0827.js :  test script run now (on Oct) 2024 with gemini 1.5 pro experimental 0827 api with 2 million tokens context length
+•	test-bt-exp-0827.js :  test script run now (on Oct 2024) with gemini 1.5 pro experimental 0827 api with 2 million tokens context length (can be accessed free now)
 
 
 
