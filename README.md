@@ -28,8 +28,8 @@ To convert html to spacy docbin format, one must run scripts sequentially html2j
 
 
 nodejs folder
-requirements: prompt.html file in the same folder, reports folder holds radiology reports in text format (ending with .txt extension), empty outputs folder, google generative-ai api installed in node_modules folder ("version": "0.7.1" in April 2024), GEMINI_API_KEY in your Environment.
-Scripts read prompt.html from current folder, read reports from reports folder, outputs tagged reports to outputs folder.
+requirements: "prompt.html" file in the same folder, "reports" folder which holds radiology reports in text format (ending with .txt extension), an empty "outputs" folder, google generative-ai api installed in "node_modules" folder ("version": "0.7.1" in April 2024), GEMINI_API_KEY in your Environment.
+javascript code reads prompt.html from current folder, read reports from reports folder, outputs tagged reports to outputs folder.
 
 •	test-bt-orig.js : test script run on April 2024 with gemini 1.5 pro preview api with 1 million tokens context length (needs paid quota now)
 
