@@ -25,3 +25,11 @@ To convert html to spacy docbin format, one must run scripts sequentially html2j
 •	seqevalF1.py reads y_pred.bio and y_true.bio and calculates metrics with python seqeval library.
 
 •	patch-to-scorer.py: patched get_ner_prf function of scorer.py of spaCy V3.7.5 in directory C:\Python\Python311\Lib\site-packages\spacy to output more metrics.
+
+nodejs folder
+•	test-bt-orig.js : test script run on April 2024 with gemini 1.5 pro preview api with 1 millon context windows
+•	test-bt-exp-0827.js :  test script run now (on Oct) 2024 with gemini 1.5 pro preview api with 1 millon context windows
+
+requirements: prompt.html file in the same folder, reports folder holds radiology reports in text format (endfing with .txt extension), empty outputs folder, google generative-ai api installed in node_modules folder
+scripts read prompt.html from current folder, read reports from reports folder, outputs tagged reports to outputs folder
+
