@@ -23,8 +23,10 @@ const safetySettings = [
   },
 ];
 const apiVersion = 'v1beta';
-// https://ai.google.dev/gemini-api/docs/models/gemini
-const modelName = 'gemini-1.5-pro-exp-0827';
+const modelName = 'gemini-1.5-pro-exp-0827'; // https://ai.google.dev/gemini-api/docs/models/gemini
+const promptFileName= 'bt prompt.html';
+const reportsDir = 'reports';
+const outputDir = 'outputs';
 
 const mistakes = [
 	'<span class="ANAT">aksiyel planda</span> <span class="OBS-P">5 mm kalınlıkta kesitler</span>','aksiyel planda 5 mm kalınlıkta kesitler',
@@ -71,14 +73,13 @@ async function run() {
     // read prompt
     let prompt;
     try {
-        prompt = await fs.readFile('prompt.html', { encoding: 'utf8' });
+        prompt = await fs.readFile(promptFileName, { encoding: 'utf8' });
     } catch (err) {
         console.error(err);
         return; // Exit if prompt reading fails
     }
 
     // Get list of report files
-    const reportsDir = 'reports';
     const files = await fs.readdir(reportsDir);
     const reportFiles = files.filter(file => path.extname(file) === '.txt');
 
@@ -118,7 +119,7 @@ async function run() {
 		}
         // Construct output file name
         const outputFileName = path.basename(reportFile, '.txt') + '-output.html';
-        const outputPath = path.join('outputs', outputFileName);
+        const outputPath = path.join(outputDir, outputFileName);
 
         // Write output
         await fs.writeFile(outputPath, output, { encoding: 'utf8' }, err => {
